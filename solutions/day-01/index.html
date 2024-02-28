@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>30 Days Of React Challenge</title>
+  </head>
+  <body>
+    <div class="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const rootElement = document.querySelector(".root");
+      /*
+1. What is a JSX Element?
+    -JSX stands for JavaScript XML as it combines the functions of JavaScript and HTML to better place HTML elements in the DOM
+*/
+
+      //2. Write your name in a JSX element and store it in a name variable
+      const name = "Jack Doe";
+      const variable = { name };
+
+      /*
+3. Write a JSX element which displays your full name, country, title,
+gender, email, phone number. Use h1 for the name and p for the rest 
+of the information and store it in a user variable.
+*/
+      const country = "India";
+      const title = "Day-2";
+      const gender = "Male";
+      const header = (
+        <header>
+          <h1>Jack Doe</h1>
+          <p>
+            Country:{country} <br></br>
+            Title: {title}
+            <br></br>
+            Gender:{gender}
+            <br></br>
+            Email: "abc@email.com"
+          </p>
+        </header>
+      );
+      //4. Write a footer JSX element
+      const footer = (
+        <div className="footer-wrapper">
+          <footer>
+            <h1>Copyright 2024</h1>
+          </footer>
+        </div>
+      );
+      const app = (
+        <div className="app">
+          {header}
+          {footer}
+        </div>
+      );
+
+      ReactDOM.render(app, rootElement);
+    </script>
+  </body>
+</html>
